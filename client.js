@@ -13,7 +13,7 @@ const connect = function() {
   });
   conn.on('connect', client => {
     console.log('Connected');
-    conn.write('Name: KAL');
+    conn.write('Name: KMH');
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
