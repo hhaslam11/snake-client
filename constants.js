@@ -1,7 +1,7 @@
 module.exports = {
-  IP: '192.168.88.51',
+  IP: '192.168.88.151',
   PORT: 50541,
-  USERNAME: 'KMH',
+  USERNAME: 'aaa',
   SPEED_X: 50,
   SPEED_Y: 80,
   KEY_MOVE_UP: 'w',

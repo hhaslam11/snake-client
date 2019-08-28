@@ -1,15 +1,18 @@
 const constants = require('./constants');
 let connection;
 let clearValue;
+
 const setupInput = function(conn) {
-  connection = conn;
   const stdin = process.stdin;
+  connection = conn;
+
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
 
   stdin.on('data', key => {
     handleUserInput(key);
   });
+
   return stdin;
 };
 
@@ -40,6 +43,7 @@ const handleUserInput = function(data) {
       connection.write('Move: right');
     }, constants.SPEED_X);
   }
+  
   if (data.toLowerCase() === '1') connection.write('Say: :)');
   if (data.toLowerCase() === '2') connection.write('Say: :(');
   if (data.toLowerCase() === '3') connection.write('Say: hello');
